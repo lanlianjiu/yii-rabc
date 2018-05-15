@@ -73,32 +73,20 @@ Password: @newsnow.com.cn@
 
 源码点[这里](https://github.com/liulipeng/Yii2-Admin)
 
-
-### 预览
-
-#### 登录
-
-![](http://www.izyue.com/yii2-admin/index/1.jpg)
-
-#### 首页
-
-![](http://www.izyue.com/yii2-admin/index/2.jpg)
-
-#### 权限管理
-
-![](http://www.izyue.com/yii2-admin/index/3.jpg)
-
-#### 角色管理
-
-![](http://www.izyue.com/yii2-admin/index/4.jpg)
-
-#### 路由管理
-
-![](http://www.izyue.com/yii2-admin/index/5.jpg)
-
-#### 菜单管理
-
-![](http://www.izyue.com/yii2-admin/index/6.jpg)
+### 自己安装时具体步骤
+1.在github克隆下来https://github.com/liulipeng/yii2-app-advanced 
+2.在yii2-app-advanced 下运行 ：	composer global require "fxp/composer-asset-plugin:~1.1.1"
+				composer create-project --prefer-dist izyue/yii2-app-advanced advanced
+3.安装时需要github的token,要有一个github账号，在需要如输入token的时点击第二个链接跳转到github上，在github上生成token再复制到安装需要的地方粘贴再回车，要输入两次token才安装完成
+4.之后在yii2-app-advanced 下多出一个advanced文件
+5.在advanced文件文件下composer install
+6.在advanced文件文件下php init （yii框架初始化选择步骤一致）
+7.打开advanced/common/main-local.php的文件（也就是数据库链接配置文件）
+8.由第7步得知数据库名称（默认是yii2_admin），在本地【数据库】建一个【数据库】名为第7步知道的数据库名称。
+9.在advanced文件文件下执行：先1.php yii migrate --migrationPath=@yii/rbac/migrations 后2.php yii migrate --migrationPath=@izyue/admin/migrations
+10：最后在浏览器访问：yii2-app-advanced/advanced文件文件下的backend/web/ (例如:localhost/Other/rabc/yii2-app-advanced/advanced/backend/web/);
+11:登录账号密码是：User: admin
+		   Password: @newsnow.com.cn@
 
 DIRECTORY STRUCTURE
 -------------------
